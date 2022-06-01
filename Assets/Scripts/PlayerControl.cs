@@ -13,6 +13,15 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
+    }
+
+    public void LButtonDown()
+    {
+        transform.Translate(-1, 0, 0);
+    }
+    public void RButtonDown()
+    {
+        transform.Translate(1, 0, 0);
     }
 }
