@@ -13,6 +13,12 @@ public class BossStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0) == true)
+
+        {
+
+            Debug.Log("마우스 눌렸다!");
+
+        }
     }
 }
