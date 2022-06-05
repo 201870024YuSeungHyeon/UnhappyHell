@@ -12,7 +12,6 @@ public class Note : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.localPosition += Vector3.down * noteSpeed * Time.deltaTime;
-        transform.localPosition += new Vector3(-11, -100, 0) * 5 * Time.deltaTime;
+        transform.localPosition += Vector3.down * noteSpeed * Time.deltaTime;
     }
 }
