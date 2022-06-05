@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 6370620530108354737}
   - component: {fileID: 6370620530108354750}
   - component: {fileID: 6370620530108354751}
-  - component: {fileID: 6370620530108354736}
   - component: {fileID: 4293091237670863067}
   - component: {fileID: 5760912313335667567}
+  - component: {fileID: -2036356495228786050}
   m_Layer: 5
-  m_Name: Note_Green
+  m_Name: Note_Non_L1
   m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ RectTransform:
   m_GameObject: {fileID: 6370620530108354738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.125, y: 1.1125, z: 1}
+  m_LocalScale: {x: 1.25, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,14 +62,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f318b0393edd5814c97da1f01998a6d6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -79,19 +79,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6370620530108354736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6370620530108354738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2283c22576c17f4f8af7714f33a037b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  noteSpeed: 400
 --- !u!61 &4293091237670863067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,3 +126,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2036356495228786050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6370620530108354738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1e614e03df4044499313c864e6ce16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noteSpeed: 400

@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 6370620530108354737}
   - component: {fileID: 6370620530108354750}
   - component: {fileID: 6370620530108354751}
-  - component: {fileID: 6370620530108354736}
   - component: {fileID: 4293091237670863067}
   - component: {fileID: 5760912313335667567}
+  - component: {fileID: 58561582583893369}
   m_Layer: 5
-  m_Name: Note_Non
+  m_Name: Note_JumpX_L4
   m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,19 +79,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6370620530108354736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6370620530108354738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2283c22576c17f4f8af7714f33a037b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  noteSpeed: 400
 --- !u!61 &4293091237670863067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,3 +126,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &58561582583893369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6370620530108354738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3266f219a22f0a488920ef86525c504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noteSpeed: 400
