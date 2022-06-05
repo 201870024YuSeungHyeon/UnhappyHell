@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -146,14 +146,14 @@ MonoBehaviour:
     y: 788
     width: 1923
     height: 519
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,22 +343,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scripts/Note
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 85
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scripts/Note
   m_LastFoldersGridSize: 85
   m_LastProjectPath: C:\Users\dlqja\OneDrive\Documents\GitHub\UnhappyHell
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9a550000
-    m_LastClickedID: 21914
-    m_ExpandedIDs: 00000000
+    m_SelectedIDs: 9c550000
+    m_LastClickedID: 21916
+    m_ExpandedIDs: 0000000090550000925500009855000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -516,7 +516,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 26fbffff
+      m_ExpandedIDs: 26fbfffff4520000fc5200000e53000020530000605300006a53000072530000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -831,9 +831,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 223.40468, y: 351.82178, z: -5.970072}
+    m_Target: {x: 643.071, y: 423.88193, z: 3.9581466}
     speed: 2
-    m_Value: {x: 223.40468, y: 351.82178, z: -5.970072}
+    m_Value: {x: 643.071, y: 423.88193, z: 3.9581466}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -883,9 +883,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 459.2752
+    m_Target: 698.8875
     speed: 2
-    m_Value: 459.2752
+    m_Value: 698.8875
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 467, y: 746}
+  m_TargetSize: {x: 1080, y: 1920}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -958,16 +958,16 @@ MonoBehaviour:
   m_PlayFocused: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 07000000000000000000000005000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -233.5
-    m_HBaseRangeMax: 233.5
-    m_VBaseRangeMin: -373
-    m_VBaseRangeMax: 373
+    m_HBaseRangeMin: -540
+    m_HBaseRangeMax: 540
+    m_VBaseRangeMin: -960
+    m_VBaseRangeMax: 960
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -987,7 +987,7 @@ MonoBehaviour:
       y: 21
       width: 467
       height: 746
-    m_Scale: {x: 1, y: 1}
+    m_Scale: {x: 0.38854167, y: 0.38854167}
     m_Translation: {x: 233.5, y: 373}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -995,16 +995,16 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -233.5
-      y: -373
-      width: 467
-      height: 746
+      x: -600.96515
+      y: -960
+      width: 1201.9303
+      height: 1920
     m_MinimalGUI: 1
-  m_defaultScale: 1
+  m_defaultScale: 0.38854167
   m_LastWindowPixelSize: {x: 467, y: 767}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_LowResolutionForAspectRatios: 01000001000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
   m_showToolbar: 1
