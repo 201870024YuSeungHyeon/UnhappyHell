@@ -13,6 +13,6 @@ public class Note3 : MonoBehaviour
     void Update()
     {
         //transform.localPosition += Vector3.down * noteSpeed * Time.deltaTime;
-        transform.localPosition += new Vector3(0, -100, 0) * 5 * Time.deltaTime;
+        transform.localPosition += new Vector3(0, -100, 0) * 3 * Time.deltaTime;
     }
 }

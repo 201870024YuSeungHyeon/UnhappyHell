@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 469
     height: 788
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 109
+  controlID: 118
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,22 +343,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts/Note
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 85
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts/Note
   m_LastFoldersGridSize: 85
   m_LastProjectPath: C:\Users\dlqja\OneDrive\Documents\GitHub\UnhappyHell
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9a550000
-    m_LastClickedID: 21914
-    m_ExpandedIDs: 0000000090550000925500009455000096550000985500009a5500009c550000a455000000ca9a3b
+    m_SelectedIDs: b0550000
+    m_LastClickedID: 21936
+    m_ExpandedIDs: 00000000885500008a5500008c5500008e5500009055000092550000945500009e55000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -386,7 +386,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000090550000925500009455000096550000985500009a5500009c550000
+    m_ExpandedIDs: 00000000885500008a5500008c5500008e550000905500009255000094550000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -516,7 +516,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1efbffff1653000068530000
+      m_ExpandedIDs: 26fbfffff4520000fc52000020530000605300006a53000072530000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -831,9 +831,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 92.694466, y: 186.56204, z: -8.676957}
+    m_Target: {x: 193.65445, y: 610.9002, z: -7.480692}
     speed: 2
-    m_Value: {x: 105.64434, y: 195.64743, z: -8.866598}
+    m_Value: {x: 193.65445, y: 610.9002, z: -7.480692}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -883,9 +883,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 402.4613
+    m_Target: 459.2752
     speed: 2
-    m_Value: 421.42545
+    m_Value: 459.2752
   m_Ortho:
     m_Target: 1
     speed: 2
