@@ -201,11 +201,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bpm: 120
+  NotePrefab:
+  - {fileID: 6370620530108354738, guid: 5985f085c495c044095898323e6bb846, type: 3}
+  - {fileID: 6370620530108354738, guid: 6b95fd74ffa568d42aa2628f1c5ad98c, type: 3}
+  - {fileID: 6370620530108354738, guid: 598450f876e459744a0b96bdb92fd920, type: 3}
+  - {fileID: 6370620530108354738, guid: 79d171b3239648a4594a001985364a08, type: 3}
+  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
+  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
   tfNoteAppear: {fileID: 2137207950}
-  goNote1: {fileID: 6370620530108354738, guid: 5985f085c495c044095898323e6bb846, type: 3}
-  goNote2: {fileID: 6370620530108354738, guid: 6b95fd74ffa568d42aa2628f1c5ad98c, type: 3}
-  goNote3: {fileID: 6370620530108354738, guid: 79d171b3239648a4594a001985364a08, type: 3}
-  goNote4: {fileID: 6370620530108354738, guid: 598450f876e459744a0b96bdb92fd920, type: 3}
 --- !u!1 &240188672
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,7 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260ab46d050431c4d9241be108a4d9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHp: {fileID: 288542570}
+  playerHp:
+  - {fileID: 0}
   canvas: {fileID: 1672565902}
   height: 1.7
 --- !u!1 &1539577674

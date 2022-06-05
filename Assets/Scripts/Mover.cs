@@ -19,8 +19,8 @@ public class Mover : MonoBehaviour
 
     void Update()
     {
-        Vector3 _hpBarPos =
+   /*     Vector3 _hpBarPos =
             Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0));
-        hpBar.position = _hpBarPos;
+        hpBar.position = _hpBarPos;*/
     }
 }
