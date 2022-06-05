@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    double x;
+
+
     // Start is called before the first frame update
     void Start()
     {
