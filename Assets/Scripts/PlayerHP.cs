@@ -24,7 +24,7 @@ public class PlayerHP : MonoBehaviour
 
         if(Player_currentHp <= 0)
         {
-            Debug.Log("ı");
+            //Debug.Log("ı");
         }
 
         SettingHPImage();

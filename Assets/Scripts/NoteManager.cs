@@ -30,5 +30,15 @@ public class NoteManager : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+       
     }
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Note"))
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("Hit");
+        }
+    }
+    */
 }
