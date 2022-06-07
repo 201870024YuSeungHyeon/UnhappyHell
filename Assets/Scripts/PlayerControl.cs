@@ -147,7 +147,7 @@ public class PlayerControl : MonoBehaviour
             if (collision.gameObject.CompareTag("Note"))
             {
                 //collision.transform.parent = transform;
-          //      thePlayerHp.DecreaseHP(1);
+                thePlayerHp.DecreaseHP(1);
                 Destroy(collision.gameObject);
             }
             if (collision.gameObject.CompareTag("Ground"))
