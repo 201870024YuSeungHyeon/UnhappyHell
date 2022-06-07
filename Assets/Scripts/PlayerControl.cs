@@ -5,24 +5,26 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] float jumpForce;
+    public Vector2 player_Pos;
     Vector2 firstPressPos, secondPressPos, currentSwipe;
     private Rigidbody2D rb;
     bool jumpAllowed =false;
-    
-   
+    PlayerHP thePlayerHp;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        thePlayerHp = FindObjectOfType<PlayerHP>();
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        player_Pos = this.gameObject.transform.position;
         TouchCheck();
-       
     }
 
     /*void FixedUpdate()
@@ -145,7 +147,7 @@ public class PlayerControl : MonoBehaviour
             if (collision.gameObject.CompareTag("Note"))
             {
                 //collision.transform.parent = transform;
-              
+          //      thePlayerHp.DecreaseHP(1);
                 Destroy(collision.gameObject);
             }
             if (collision.gameObject.CompareTag("Ground"))
