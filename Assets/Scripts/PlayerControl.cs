@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    [SerializeField] float jumpForce = 600f;
+    [SerializeField] float jumpForce;
     Vector2 firstPressPos, secondPressPos, currentSwipe;
     private Rigidbody2D rb;
-    bool jumpAllowed = false;
+    bool jumpAllowed =false;
+    
    
 
 
@@ -21,14 +22,15 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         TouchCheck();
+       
     }
 
-    void FixedUpdate()
+    /*void FixedUpdate()
     {
         JumpIfAllowed();
 
 
-    }
+    }*/
 
     void TouchCheck()
     {
@@ -53,13 +55,34 @@ public class PlayerControl : MonoBehaviour
                 currentSwipe.Normalize();
 
                 //위로 슬라이드 했을 때
-                if (currentSwipe.y > 0  && currentSwipe.x > -0.3f && currentSwipe.x < 0.3f && rb.velocity.y == 0)
+                if (currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
+             {
+                    if (!jumpAllowed)
+                    {
+                        jumpAllowed = true;
+                        rb.AddForce(Vector2.up * jumpForce);
+
+
+
+                        //gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+                        /*if(rb.velocity.y == -809)
+                        {
+                            gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                        }*/
+
+                    }
+                    else
+                    {
+                        return;
+                    }
+                   
+                }
+               
+                if (currentSwipe.y < 0  &&  currentSwipe.x > -0.5f  && currentSwipe.x < 0.5f )
+
              {
                     
-                    jumpAllowed = true;
-                }
-                if (currentSwipe.y < 0  &&  currentSwipe.x > -0.5f  && currentSwipe.x < 0.5f && rb.velocity.y == 150.1405)
-             {
                     Debug.Log("down swipe");
                 }
 
@@ -81,24 +104,37 @@ public class PlayerControl : MonoBehaviour
             }
         }*/
     }
-    void JumpIfAllowed()
+    /*void JumpIfAllowed()
     {
         if (jumpAllowed)
         {
             rb.AddForce(Vector2.up * jumpForce);
-            jumpAllowed = false;
+            
+            
+            //gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            
+            /*if(rb.velocity.y == -809)
+            {
+                gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            }
+            
         }
-    }
+        else
+        {
+            return;
+        }
+    }*/
+       
 
     public void LButtonDown()
     {
-        transform.Translate(-200, 0, 0);
+        transform.Translate(-200, 10, 0);
         
 
     }
     public void RButtonDown()
     {
-        transform.Translate(200, 0, 0);
+        transform.Translate(200, 10, 0);
        
     }
 
@@ -108,12 +144,17 @@ public class PlayerControl : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Note"))
             {
-                collision.transform.parent = transform;
-                Debug.Log("Hit");
+                //collision.transform.parent = transform;
+              
                 Destroy(collision.gameObject);
+            }
+            if (collision.gameObject.CompareTag("Ground"))
+            {
+                jumpAllowed = false;
             }
         }
     }
-  
+    
+
 
 }

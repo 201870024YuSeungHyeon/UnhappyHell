@@ -7,15 +7,14 @@ public class PlayerHP : MonoBehaviour
 {
     int Player_maxHp = 3, Player_currentHp = 3; //최대체력, 현재체력 기본값 설정
     public GameObject[] hpImage = null;
+   
 
     void Update()
     {
   //      hpImage.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 0.8f, 0));
-
-        if (Input.GetMouseButtonDown(0)) 
-        {
-            DecreaseHP(1);
-        }
+ 
+   
+       
     }
 
     public void DecreaseHP(int p_num) //데미지 닳았을 때 호출
