@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class PlayerHP : MonoBehaviour
 {
     public int player_currentHp = 3; //최대체력, 현재체력 기본값 설정
-    public GameObject[] hpImage = null;
+    public Image[] hpImage = null;
     PlayerControl playerControl;
     void Start()
     {
+        ColorTransparency();
         playerControl = GameObject.Find("강림back").GetComponent<PlayerControl>();
     }
 
@@ -34,6 +35,26 @@ public class PlayerHP : MonoBehaviour
                 hpImage[i].gameObject.SetActive(true);
             else
                 hpImage[i].gameObject.SetActive(false);
+        }
+    }
+
+    public void ColorTransparency() //체력바 투명도 0
+    {
+        for (int i = 0; i < hpImage.Length; i++) 
+        {
+            Color color = hpImage[i].color;
+            color.a = 0.0f;
+            hpImage[i].color = color;
+        }
+    }
+
+    public void UnColorTransparency() //체력바 투명도 100
+    {
+        for (int i = 0; i < hpImage.Length; i++)
+        {
+            Color color = hpImage[i].color;
+            color.a = 1.0f;
+            hpImage[i].color = color;
         }
     }
 

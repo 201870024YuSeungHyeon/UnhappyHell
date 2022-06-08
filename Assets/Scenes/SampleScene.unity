@@ -446,9 +446,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_currentHp: 3
   hpImage:
-  - {fileID: 1539577674}
-  - {fileID: 994875900}
-  - {fileID: 2081320362}
+  - {fileID: 1539577676}
+  - {fileID: 994875902}
+  - {fileID: 2081320364}
 --- !u!1 &377764030
 GameObject:
   m_ObjectHideFlags: 0

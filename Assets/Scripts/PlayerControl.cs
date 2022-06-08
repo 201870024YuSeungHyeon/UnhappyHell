@@ -131,13 +131,10 @@ public class PlayerControl : MonoBehaviour
     public void LButtonDown()
     {
         transform.Translate(-200, 10, 0);
-        
-
     }
     public void RButtonDown()
     {
         transform.Translate(200, 10, 0);
-       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -147,6 +144,7 @@ public class PlayerControl : MonoBehaviour
             if (collision.gameObject.CompareTag("Note"))
             {
                 //collision.transform.parent = transform;
+                StartCoroutine(playerHpDelay());
                 thePlayerHp.DecreaseHP(1);
                 Destroy(collision.gameObject);
             }
@@ -156,7 +154,12 @@ public class PlayerControl : MonoBehaviour
             }
         }
     }
-    
 
+    IEnumerator playerHpDelay()
+    {
+        thePlayerHp.UnColorTransparency();
+        yield return new WaitForSecondsRealtime(1f);
+        thePlayerHp.ColorTransparency();
+    }
 
 }
