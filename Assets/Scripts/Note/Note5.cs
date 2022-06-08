@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Note5 : MonoBehaviour
 {
-    public float noteSpeed = 400;
     // Start is called before the first frame update
 
 
@@ -13,6 +12,6 @@ public class Note5 : MonoBehaviour
     void Update()
     {
         //transform.localPosition += Vector3.down * noteSpeed * Time.deltaTime;
-        transform.localPosition += new Vector3(11, -100, 0) * 3 * Time.deltaTime;
+        transform.localPosition += new Vector3(11, -100, 0) * 7 * Time.deltaTime;
     }
 }
