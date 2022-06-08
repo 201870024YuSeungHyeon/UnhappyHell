@@ -202,22 +202,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 120
   NotePrefab:
-  - {fileID: 6370620530108354738, guid: 5985f085c495c044095898323e6bb846, type: 3}
-  - {fileID: 6370620530108354738, guid: 6b95fd74ffa568d42aa2628f1c5ad98c, type: 3}
-  - {fileID: 6370620530108354738, guid: 598450f876e459744a0b96bdb92fd920, type: 3}
-  - {fileID: 6370620530108354738, guid: 79d171b3239648a4594a001985364a08, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
-  - {fileID: 6370620530108354738, guid: 4b0a866caada1af4b86e421cfd5d3587, type: 3}
+  - {fileID: 6370620530108354738, guid: 36f1cdd2dd75c584ba73347dd705a815, type: 3}
+  - {fileID: 6370620530108354738, guid: ce01baa814d32284e957018064a60efe, type: 3}
+  - {fileID: 6370620530108354738, guid: 93db99b0a3f46d040a32bdaf328f5b66, type: 3}
+  - {fileID: 6370620530108354738, guid: d36f19a1613a87345a3e4a5c1aa91c4e, type: 3}
+  - {fileID: 6370620530108354738, guid: 19f95733dea5b174da4baa987ad2b57e, type: 3}
+  - {fileID: 6370620530108354738, guid: 19f95733dea5b174da4baa987ad2b57e, type: 3}
+  - {fileID: 6370620530108354738, guid: 19f95733dea5b174da4baa987ad2b57e, type: 3}
+  - {fileID: 6370620530108354738, guid: 19f95733dea5b174da4baa987ad2b57e, type: 3}
+  - {fileID: 6370620530108354738, guid: 19f95733dea5b174da4baa987ad2b57e, type: 3}
   tfNoteAppear: {fileID: 2137207950}
 --- !u!1 &147998043
 GameObject:
@@ -298,22 +291,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 120
   NotePrefab:
-  - {fileID: 6370620530108354738, guid: b28726d5cccc92643bd871c3319ea4fc, type: 3}
-  - {fileID: 6370620530108354738, guid: 013e50ec96fd26140939e0e3d65b12ea, type: 3}
-  - {fileID: 6370620530108354738, guid: fb0f07abe8a736c458131d551988d890, type: 3}
-  - {fileID: 6370620530108354738, guid: f3291b43379277142a1ffe8f3808a933, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
-  - {fileID: 6370620530108354738, guid: 20cf00512ff09794fb7ffd3fce597dff, type: 3}
+  - {fileID: 6370620530108354738, guid: dad48114f1d854443a6c5589391d120b, type: 3}
+  - {fileID: 6370620530108354738, guid: 8ab6457c4372107489c90a1258f97bd7, type: 3}
+  - {fileID: 6370620530108354738, guid: dbbf486a75da15545883dbe9344f1e75, type: 3}
+  - {fileID: 6370620530108354738, guid: 95b16e9d033abea43845b35fe364bae0, type: 3}
+  - {fileID: 6370620530108354738, guid: 966c4b3cdbd65254aaf503ee632334ff, type: 3}
+  - {fileID: 6370620530108354738, guid: 966c4b3cdbd65254aaf503ee632334ff, type: 3}
+  - {fileID: 6370620530108354738, guid: 966c4b3cdbd65254aaf503ee632334ff, type: 3}
+  - {fileID: 6370620530108354738, guid: 966c4b3cdbd65254aaf503ee632334ff, type: 3}
+  - {fileID: 6370620530108354738, guid: 966c4b3cdbd65254aaf503ee632334ff, type: 3}
   tfNoteAppear: {fileID: 675478183}
 --- !u!1 &240188672
 GameObject:
@@ -666,13 +652,6 @@ MonoBehaviour:
   - {fileID: 6370620530108354738, guid: 0ea117d9d61ae0b4ebc532ae2c3b5852, type: 3}
   - {fileID: 6370620530108354738, guid: 1600387e6cf45944ea178e75a1f27190, type: 3}
   - {fileID: 6370620530108354738, guid: c8c09a3d70a46b44ca5d8c3e81f5349e, type: 3}
-  - {fileID: 6370620530108354738, guid: ff7443497ba2e014fad37933db2fbd57, type: 3}
-  - {fileID: 6370620530108354738, guid: ff7443497ba2e014fad37933db2fbd57, type: 3}
-  - {fileID: 6370620530108354738, guid: ff7443497ba2e014fad37933db2fbd57, type: 3}
-  - {fileID: 6370620530108354738, guid: ff7443497ba2e014fad37933db2fbd57, type: 3}
-  - {fileID: 6370620530108354738, guid: ff7443497ba2e014fad37933db2fbd57, type: 3}
-  - {fileID: 6370620530108354738, guid: ff7443497ba2e014fad37933db2fbd57, type: 3}
-  - {fileID: 6370620530108354738, guid: ff7443497ba2e014fad37933db2fbd57, type: 3}
   - {fileID: 6370620530108354738, guid: ff7443497ba2e014fad37933db2fbd57, type: 3}
   - {fileID: 6370620530108354738, guid: ff7443497ba2e014fad37933db2fbd57, type: 3}
   - {fileID: 6370620530108354738, guid: ff7443497ba2e014fad37933db2fbd57, type: 3}
@@ -1116,7 +1095,7 @@ GameObject:
   - component: {fileID: 1182811964}
   - component: {fileID: 1182811966}
   - component: {fileID: 1182811968}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: "\uAC15\uB9BCback"
   m_TagString: Character
   m_Icon: {fileID: 0}
@@ -1163,7 +1142,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 491130919d8e0b04a80d1e516ec4d56c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1573,22 +1552,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 120
   NotePrefab:
-  - {fileID: 6370620530108354738, guid: 24e8bfb88fd767a4c89f3bb502270fcb, type: 3}
-  - {fileID: 6370620530108354738, guid: a489626e0976a9e449e090f98256ee8a, type: 3}
-  - {fileID: 6370620530108354738, guid: 704aa451a04057343bce53ba1c4f1f89, type: 3}
-  - {fileID: 6370620530108354738, guid: 0bce7a02e166e5245bb28ce7c2cf86c7, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
-  - {fileID: 6370620530108354738, guid: 05ae0cc739ec2354cabb6140a3ddf498, type: 3}
+  - {fileID: 6370620530108354738, guid: e7b3ef5b746dacf4aba021cf51daa718, type: 3}
+  - {fileID: 6370620530108354738, guid: 5dec1c3d1754c0540a5cd8673c4e50f5, type: 3}
+  - {fileID: 6370620530108354738, guid: 9ef6e56364a64b74ea6a3363d4fb89c9, type: 3}
+  - {fileID: 6370620530108354738, guid: bcd389d12eec8ca4c86a4dc32cb632b6, type: 3}
+  - {fileID: 6370620530108354738, guid: 0dc682febfb74ab4183cede2694439bc, type: 3}
+  - {fileID: 6370620530108354738, guid: 0dc682febfb74ab4183cede2694439bc, type: 3}
+  - {fileID: 6370620530108354738, guid: 0dc682febfb74ab4183cede2694439bc, type: 3}
+  - {fileID: 6370620530108354738, guid: 0dc682febfb74ab4183cede2694439bc, type: 3}
+  - {fileID: 6370620530108354738, guid: 0dc682febfb74ab4183cede2694439bc, type: 3}
   tfNoteAppear: {fileID: 1067765048}
 --- !u!1 &1745239434
 GameObject:
@@ -1669,22 +1641,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 120
   NotePrefab:
-  - {fileID: 6370620530108354738, guid: daaaf9bc1a41ee54d808898d14ea058e, type: 3}
-  - {fileID: 6370620530108354738, guid: d20dc74c111dcf94c803b8c6ecee7d1c, type: 3}
-  - {fileID: 6370620530108354738, guid: fe76eed36af6acc44a1f6bea931a70cf, type: 3}
-  - {fileID: 6370620530108354738, guid: 77719e59bddd3f6469bdc4e29be8bff8, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
-  - {fileID: 6370620530108354738, guid: 3e3ab46d95e3c1445ad429172a9af9ba, type: 3}
+  - {fileID: 6370620530108354738, guid: 99196026c470aff4ebc834d47f2cc55d, type: 3}
+  - {fileID: 6370620530108354738, guid: fb4adbc98b2bf4f409ba6be983a49925, type: 3}
+  - {fileID: 6370620530108354738, guid: fdd7397e64342e44eaf5bd9ee5c2a486, type: 3}
+  - {fileID: 6370620530108354738, guid: 8ffd1aa139637fd4d8bd5cbc1d00a5ec, type: 3}
+  - {fileID: 6370620530108354738, guid: 3c602ed2f1209514492fdb1578875633, type: 3}
+  - {fileID: 6370620530108354738, guid: 3c602ed2f1209514492fdb1578875633, type: 3}
+  - {fileID: 6370620530108354738, guid: 3c602ed2f1209514492fdb1578875633, type: 3}
+  - {fileID: 6370620530108354738, guid: 3c602ed2f1209514492fdb1578875633, type: 3}
+  - {fileID: 6370620530108354738, guid: 3c602ed2f1209514492fdb1578875633, type: 3}
   tfNoteAppear: {fileID: 377764031}
 --- !u!1 &1887496590
 GameObject:

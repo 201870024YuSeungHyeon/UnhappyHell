@@ -7,6 +7,7 @@ TagManager:
   - Note
   - Character
   - Background
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -14,13 +15,13 @@ TagManager:
   - Background
   - Water
   - UI
-  - Player
+  - 
   - PlayerDamaged
   - 
   - EnemyAttack
   - EnemyDamaged
   - EnemyAttack_Non
-  - 
+  - Player
   - 
   - 
   - 
