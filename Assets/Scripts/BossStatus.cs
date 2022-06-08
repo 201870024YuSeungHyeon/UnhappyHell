@@ -9,13 +9,11 @@ public class BossStatus : MonoBehaviour
     private Image thisImg; //오브젝트에 붙어있는 이미지 컴포넌트를 담고있는 변수선언
     int BossHP = 100; //보스체력
 
-    // Start is called before the first frame update
     void Start()
     {
         thisImg = GetComponent<Image>(); //오브젝트에 부착된 이미지 컴포넌트 가져오기
     }
 
-    // Update is called once per frame
     void Update()
     {
         /*if (Input.GetMouseButtonDown(0))  이거 그냥 확인용...

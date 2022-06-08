@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHP : MonoBehaviour
 {
-    public int Player_maxHp = 3, Player_currentHp = 3; //최대체력, 현재체력 기본값 설정
+    public int Player_currentHp = 3; //최대체력, 현재체력 기본값 설정
     public GameObject[] hpImage = null;
     PlayerControl playerControl;
     void Start()
@@ -15,8 +15,7 @@ public class PlayerHP : MonoBehaviour
 
     void Update()
     {
-        //playerControl.player_Pos = 강림 위치값
-        transform.localPosition = playerControl.player_Pos;
+        transform.localPosition = playerControl.player_Pos; //체력바의 좌표와 강림의 좌표값 일치
     }
 
     public void DecreaseHP(int p_num) //데미지 닳았을 때 호출
