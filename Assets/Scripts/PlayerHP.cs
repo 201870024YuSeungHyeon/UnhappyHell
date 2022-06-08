@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHP : MonoBehaviour
 {
-    public int Player_currentHp = 3; //최대체력, 현재체력 기본값 설정
+    public int player_currentHp = 3; //최대체력, 현재체력 기본값 설정
     public GameObject[] hpImage = null;
     PlayerControl playerControl;
     void Start()
@@ -16,17 +16,13 @@ public class PlayerHP : MonoBehaviour
     void Update()
     {
         transform.localPosition = playerControl.player_Pos; //체력바의 좌표와 강림의 좌표값 일치
+        if (player_currentHp == 0)
+            ExitGame();
     }
 
     public void DecreaseHP(int p_num) //데미지 닳았을 때 호출
     {
-        Player_currentHp -= p_num;
-
-        if (Player_currentHp <= 0)
-        {
-            //Debug.Log("캇");
-        }
-
+        player_currentHp -= p_num;
         SettingHPImage();
     }
 
@@ -34,10 +30,19 @@ public class PlayerHP : MonoBehaviour
     {
         for (int i = 0; i < hpImage.Length; i++)
         {
-            if (i < Player_currentHp)
+            if (i < player_currentHp)
                 hpImage[i].gameObject.SetActive(true);
             else
                 hpImage[i].gameObject.SetActive(false);
         }
+    }
+
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
