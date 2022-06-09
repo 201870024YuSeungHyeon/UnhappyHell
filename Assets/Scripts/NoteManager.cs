@@ -20,7 +20,7 @@ public class NoteManager : MonoBehaviour
             GameObject t_note = Instantiate(NotePrefab[NoteIndex], tfNoteAppear.position, Quaternion.identity);
             t_note.transform.SetParent(this.transform);
            
-            currentTime -= 60d / bpm;
+            currentTime -= 90d / bpm;
         }
     }
 
