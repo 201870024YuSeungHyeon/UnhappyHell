@@ -24,17 +24,10 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         player_Pos = this.gameObject.transform.position;
-        TouchCheck();
+        //TouchCheck();
     }
-
-    /*void FixedUpdate()
-    {
-        JumpIfAllowed();
-
-
-    }*/
-
-    void TouchCheck()
+    
+    /*void TouchCheck()
     {
         if (Input.touches.Length > 0)
         {
@@ -64,17 +57,6 @@ public class PlayerControl : MonoBehaviour
                         jumpAllowed = true;
                         rb.AddForce(Vector2.up * jumpForce);
                         gameObject.layer = 7;
-
-
-
-
-                        //gameObject.GetComponent<BoxCollider2D>().enabled = false;
-
-                        /*if(rb.velocity.y == -809)
-                        {
-                            gameObject.GetComponent<BoxCollider2D>().enabled = true;
-                        }*/
-
                     }
                     else
                     {
@@ -92,42 +74,25 @@ public class PlayerControl : MonoBehaviour
 
             }
         }
-        /*if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            startTouchPos = Input.GetTouch(0).position;
-            jumpAllowed = false;
-        }
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
-        {
-            endTouchPos = Input.GetTouch(0).position;
-           
-            if (endTouchPos.y > startTouchPos.y && rb.velocity.y == 0)
-            {
-                jumpAllowed = true;
+       
+    }*/
 
-            }
-        }*/
-    }
-    /*void JumpIfAllowed()
+    public void JumpTouched()
     {
-        if (jumpAllowed)
+        if (!jumpAllowed)
         {
+            jumpAllowed = true;
             rb.AddForce(Vector2.up * jumpForce);
-            
-            
-            //gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            
-            /*if(rb.velocity.y == -809)
-            {
-                gameObject.GetComponent<BoxCollider2D>().enabled = true;
-            }
-            
+            gameObject.layer = 7;
         }
         else
         {
             return;
         }
-    }*/
+        
+       
+    }
+    
        
 
     public void LButtonDown()
