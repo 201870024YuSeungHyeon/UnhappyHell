@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5760912313335667567}
   - component: {fileID: 3685230275273455520}
   - component: {fileID: -7257481897986838873}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Note_JumpX_L1
   m_TagString: Note
   m_Icon: {fileID: 0}
