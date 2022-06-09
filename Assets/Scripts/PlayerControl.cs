@@ -6,10 +6,16 @@ public class PlayerControl : MonoBehaviour
 {
     [SerializeField] float jumpForce;
     public Vector2 player_Pos;
-    Vector2 firstPressPos, secondPressPos, currentSwipe;
+    //Vector2 firstPressPos, secondPressPos, currentSwipe;
+   
     private Rigidbody2D rb;
+   
     bool jumpAllowed =false;
+   
     PlayerHP thePlayerHp;
+    public GameObject absorption;
+
+    public bool isAbsorb;
 
 
 
@@ -123,6 +129,7 @@ public class PlayerControl : MonoBehaviour
             }
         }
     }
+   
 
     IEnumerator playerHpDelay()
     {

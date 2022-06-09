@@ -8,6 +8,7 @@ TagManager:
   - Character
   - Background
   - Ground
+  - Absorption
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - EnemyAttack_Non
   - Player
   - EnemyAttack_JumpX
-  - 
+  - Absorption
   - 
   - 
   - 
