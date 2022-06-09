@@ -63,6 +63,8 @@ public class PlayerControl : MonoBehaviour
                     {
                         jumpAllowed = true;
                         rb.AddForce(Vector2.up * jumpForce);
+                        gameObject.layer = 7;
+
 
 
 
@@ -145,11 +147,13 @@ public class PlayerControl : MonoBehaviour
             {
                 //collision.transform.parent = transform;
                 StartCoroutine(playerHpDelay());
+                
                 thePlayerHp.DecreaseHP(1);
                 Destroy(collision.gameObject);
             }
             if (collision.gameObject.CompareTag("Ground"))
             {
+                gameObject.layer = 12;
                 jumpAllowed = false;
             }
         }
@@ -161,5 +165,7 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         thePlayerHp.ColorTransparency();
     }
+
+   
 
 }
