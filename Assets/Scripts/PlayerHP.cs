@@ -11,7 +11,7 @@ public class PlayerHP : MonoBehaviour
     void Start()
     {
         ColorTransparency();
-        playerControl = GameObject.Find("°­¸²back").GetComponent<PlayerControl>();
+        playerControl = FindObjectOfType<PlayerControl>();
     }
 
     void Update()

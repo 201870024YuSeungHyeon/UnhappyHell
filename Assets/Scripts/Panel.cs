@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Panel : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameStart gameStart;
     void Start()
+    {
+        gameStart = GameObject.Find("GameStart").GetComponent<GameStart>();
+        
+    }
+    public void Touch()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
