@@ -5,29 +5,29 @@ using UnityEngine.UI;
 
 public class PlayerHP : MonoBehaviour
 {
-    public int player_currentHp = 3; //최대체력, 현재체력 기본값 설정
-    public Image[] hpImage = null;
-    PlayerControl playerControl;
+    public int player_currentHp = 3; //현재체력 기본값 설정
+    public Image[] hpImage = null; //이미지참조 배열컴포넌트
+    PlayerControl playerControl; //PlayerControl참조변수 
     void Start()
     {
         ColorTransparency();
-        playerControl = FindObjectOfType<PlayerControl>();
+        playerControl = FindObjectOfType<PlayerControl>(); //PlayerControl참조하기
     }
 
     void Update()
     {
         transform.localPosition = playerControl.player_Pos; //체력바의 좌표와 강림의 좌표값 일치
-        if (player_currentHp == 0)
+        if (player_currentHp == 0) //체력이 0되면 게임 끝
             ExitGame();
     }
 
-    public void DecreaseHP(int p_num) //데미지 닳았을 때 호출
+    public void DecreaseHP(int p_num) //데미지입을때 호출
     {
-        player_currentHp -= p_num;
+        player_currentHp -= p_num; //파라미터 값만큼 체력감소
         SettingHPImage();
     }
 
-    void SettingHPImage() //체력 닳을 시 보여주는 이미지하나씩 없애줌
+    void SettingHPImage() //체력 감소시 체력이미지 한 개씩 비활성화
     {
         for (int i = 0; i < hpImage.Length; i++)
         {

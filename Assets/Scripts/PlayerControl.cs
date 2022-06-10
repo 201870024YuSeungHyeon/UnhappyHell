@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] float jumpForce;
-    public Vector2 player_Pos;
+    public Vector2 player_Pos; 
     //Vector2 firstPressPos, secondPressPos, currentSwipe;
    
     private Rigidbody2D rb;
    
     bool jumpAllowed =false;
    
-    PlayerHP thePlayerHp;
+    PlayerHP thePlayerHp; //PlayerHp참조 변수
     public GameObject absorption;
 
     public bool isAbsorb;
@@ -25,16 +25,15 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        thePlayerHp = FindObjectOfType<PlayerHP>();
+        thePlayerHp = FindObjectOfType<PlayerHP>(); //PlayerHP 참조
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        player_Pos = this.gameObject.transform.position;   
+        player_Pos = gameObject.transform.position; //캐릭터 위치값을 변수에 저장
     }
     
-
     public void JumpTouched()
     {
         if (!jumpAllowed)
@@ -48,7 +47,7 @@ public class PlayerControl : MonoBehaviour
             return;
         } 
     }
-    
+
     public void LButtonDown()
     {
         transform.Translate(-200, 10, 0);
@@ -88,7 +87,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    IEnumerator playerHpDelay()
+    IEnumerator playerHpDelay() //체력바 1초동안 활성화
     {
         thePlayerHp.UnColorTransparency();
         yield return new WaitForSecondsRealtime(1f);
