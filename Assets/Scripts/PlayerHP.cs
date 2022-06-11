@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHP : MonoBehaviour
 {
+    public int player_MaxHp = 3;  //최대체력
     public int player_currentHp = 3; //현재체력 기본값 설정
     public Image[] hpImage = null; //이미지참조 배열컴포넌트
     PlayerControl playerControl; //PlayerControl참조변수 
@@ -26,9 +27,12 @@ public class PlayerHP : MonoBehaviour
         player_currentHp -= p_num; //파라미터 값만큼 체력감소
         SettingHPImage();
     }
-    public void IncreaseHP(int p_num)
+    public void IncreaseHP(int p_num)  //데미지 회복시 호출
     {
-        player_currentHp += p_num;
+        if (player_currentHp < player_MaxHp)
+            player_currentHp += p_num;
+        else
+            player_currentHp = player_MaxHp; //최대체력을 넘을 수 없도록
         SettingHPImage();
     }
 

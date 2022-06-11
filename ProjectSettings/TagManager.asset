@@ -9,6 +9,10 @@ TagManager:
   - Background
   - Ground
   - Absorption
+  - Note_Blue
+  - Note_Green
+  - Note_JumpX
+  - Note_Red
   layers:
   - Default
   - TransparentFX
@@ -17,7 +21,7 @@ TagManager:
   - Water
   - UI
   - 
-  - PlayerDamaged
+  - PlayerJumping
   - 
   - EnemyAttack
   - EnemyDamaged

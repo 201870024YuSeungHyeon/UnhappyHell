@@ -502,6 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722e7bb22a8264f4b8abe4e4061db09a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_MaxHp: 3
   player_currentHp: 3
   hpImage:
   - {fileID: 1539577676}
@@ -821,6 +822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 671566200}
   - component: {fileID: 671566199}
+  - component: {fileID: 671566202}
   - component: {fileID: 671566201}
   m_Layer: 14
   m_Name: Absorption
@@ -870,7 +872,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fef810916cd1fe14987073d445cd0ee9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -889,12 +891,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671566198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.05, y: 4.71, z: 0}
-  m_LocalScale: {x: 1.3871087, y: 1.0969663, z: 0}
+  m_LocalPosition: {x: 525, y: 378, z: 0}
+  m_LocalScale: {x: 20, y: 30, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1182811962}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &671566201
 BoxCollider2D:
@@ -909,19 +911,36 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.2917838, y: 0.048265934}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 9.05, y: 3.93}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8.710319, y: 3.0874739}
   m_EdgeRadius: 0
+--- !u!114 &671566202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671566198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 080031cbfe3a0b343ae501beea4a7249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  absorption: {fileID: 671566198}
+  absorbBtn: {fileID: 2102790798}
+  isAbsorb: 0
+  Absorbmode: 0
+  Attackmode: 0
 --- !u!1 &675478182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,8 +1448,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 0}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 671566200}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1490,9 +1508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 180000
   player_Pos: {x: 0, y: 0}
-  absorption: {fileID: 0}
-  btn: {fileID: 0}
-  isAbsorb: 0
+  jumpBtn: {fileID: 0}
 --- !u!61 &1182811968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2401,9 +2417,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1182811966}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 671566202}
+        m_TargetAssemblyTypeName: AttackEvent, Assembly-CSharp
+        m_MethodName: AbsorbButtonDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

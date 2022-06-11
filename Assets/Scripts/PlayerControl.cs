@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+    
 
 public class PlayerControl : MonoBehaviour
 {
@@ -14,22 +15,27 @@ public class PlayerControl : MonoBehaviour
     bool jumpAllowed =false;
    
     PlayerHP thePlayerHp; //PlayerHp참조 변수
-    public GameObject absorption;
-    public GameObject btn;
+   
+    public GameObject jumpBtn;
 
-    public bool isAbsorb;
+
+    private float fDestroyTime = 3f;
+    private float fTickTime;
+
 
     bool isHurt;
     SpriteRenderer sr;
     Color halfA = new Color(1, 1, 1, 0.5f);
     Color fullA = new Color(1, 1, 1, 1);
+   
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         thePlayerHp = FindObjectOfType<PlayerHP>(); //PlayerHP 참조
         rb = GetComponent<Rigidbody2D>();
-        btn = GameObject.Find("JumpButton");
+        jumpBtn = GameObject.Find("JumpButton");
+       
         
         
 
@@ -37,15 +43,26 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
+        fTickTime += Time.deltaTime;
+        if (thePlayerHp.player_currentHp != thePlayerHp.player_MaxHp)
+        {
+            if (fTickTime >= fDestroyTime)
+            {
+                StartCoroutine(playerHpDelay());
+                thePlayerHp.IncreaseHP(1);
+                fTickTime = 0f;
+            }
+        }
+
         player_Pos = gameObject.transform.position; //캐릭터 위치값을 변수에 저장
         
         if (jumpAllowed == true)
         {
-            btn.SetActive(false);
+            jumpBtn.SetActive(false);
         }
         if (jumpAllowed == false)
         {
-            btn.SetActive(true);
+            jumpBtn.SetActive(true);
         }
     }
     
@@ -95,19 +112,23 @@ public class PlayerControl : MonoBehaviour
         }
 
     }
+
+   
+
+
+
     public void Hurt()
     {
         if (!isHurt)
         {
             isHurt = true;
             thePlayerHp.DecreaseHP(1);
-            Invoke("thePlayerHp.IncreaseHp(1)", 3);
-            //thePlayerHp.IncreaseHP(1);
+            fTickTime = 0.0f;
         }
 
     }
 
-
+  
 
     IEnumerator playerHpDelay() //체력바 1초동안 활성화
     {
