@@ -51,17 +51,19 @@ public class PlayerControl : MonoBehaviour
     public void LButtonDown()
     {
         transform.Translate(-200, 10, 0);
+        jumpAllowed = false;
     }
     public void RButtonDown()
     {
         transform.Translate(200, 10, 0);
+        jumpAllowed = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (gameObject.activeInHierarchy)
         {
-            if (collision.gameObject.CompareTag("Note"))
+            if (collision.CompareTag("Note_JumpX") || collision.CompareTag("Note_Blue") || collision.CompareTag("Note_Red") || collision.CompareTag("Note_Green"))
             {
                 Hurt();
                 StartCoroutine(HurtRoutine());
@@ -83,7 +85,7 @@ public class PlayerControl : MonoBehaviour
         if (!isHurt)
         {
             isHurt = true;
-            thePlayerHp.DecreaseHP(1);
+            thePlayerHp.DecreaseHP(0);
         }
     }
 

@@ -12,7 +12,7 @@ public class LodingScene : MonoBehaviour //LodingScene->fade에 적용
     {
         fadePanel.gameObject.SetActive(true);//패널 활성화
         StartCoroutine("FadeCoroutine"); //코루틴 함수 호출
-        Invoke("Change", 0.3f); //0.3f 후 Change실행
+        Invoke("Change", 0.2f); //0.3f 후 Change실행
     }
 
     public void Change() //씬 전환 함수

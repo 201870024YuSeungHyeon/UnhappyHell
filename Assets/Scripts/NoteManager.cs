@@ -26,7 +26,7 @@ public class NoteManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision) 
     {
-        if (collision.CompareTag("Note")) 
+        if (collision.CompareTag("Note_JumpX") || collision.CompareTag("Note_Blue") || collision.CompareTag("Note_Red") || collision.CompareTag("Note_Green")) 
         {
             Destroy(collision.gameObject);
         }
