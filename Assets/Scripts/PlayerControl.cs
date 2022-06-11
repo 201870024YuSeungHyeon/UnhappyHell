@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerControl : MonoBehaviour
    
     PlayerHP thePlayerHp; //PlayerHp참조 변수
     public GameObject absorption;
+    public GameObject btn;
 
     public bool isAbsorb;
 
@@ -27,11 +29,24 @@ public class PlayerControl : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         thePlayerHp = FindObjectOfType<PlayerHP>(); //PlayerHP 참조
         rb = GetComponent<Rigidbody2D>();
+        btn = GameObject.Find("JumpButton");
+       
+        
+
     }
 
     void Update()
     {
         player_Pos = gameObject.transform.position; //캐릭터 위치값을 변수에 저장
+        
+        if (jumpAllowed == true)
+        {
+            btn.SetActive(false);
+        }
+        if (jumpAllowed == false)
+        {
+            btn.SetActive(true);
+        }
     }
     
     public void JumpTouched()

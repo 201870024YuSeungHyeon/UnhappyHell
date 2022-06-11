@@ -1491,6 +1491,7 @@ MonoBehaviour:
   jumpForce: 180000
   player_Pos: {x: 0, y: 0}
   absorption: {fileID: 0}
+  btn: {fileID: 0}
   isAbsorb: 0
 --- !u!61 &1182811968
 BoxCollider2D:
@@ -1779,8 +1780,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384, y: -606}
-  m_SizeDelta: {x: 290, y: 209.3333}
+  m_AnchoredPosition: {x: 384, y: -525}
+  m_SizeDelta: {x: 290, y: 294.9629}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1676804940
 MonoBehaviour:
@@ -1871,8 +1872,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8d0bcca5f67d10c4791e2c1f3939c13e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2353,8 +2354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384, y: -835}
-  m_SizeDelta: {x: 290, y: 209.3333}
+  m_AnchoredPosition: {x: 384, y: -816.54}
+  m_SizeDelta: {x: 290, y: 240.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2102790800
 MonoBehaviour:
