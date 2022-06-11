@@ -18,7 +18,7 @@ public class AttackEvent : MonoBehaviour
     
     int r = 0, g = 0, b = 0;
 
-    private float absorbTime = 1f;
+    private float absorbTime = 0.1f;
     private float countTime;
 
 
@@ -27,7 +27,7 @@ public class AttackEvent : MonoBehaviour
     {
         absorption = GameObject.Find("Absorption");
         absorbBtn = GameObject.Find("AbsorbButton");
-        absorption.SetActive(true);
+        absorption.SetActive(false);
         playerControl = FindObjectOfType<PlayerControl>();
     }
 
@@ -40,12 +40,12 @@ public class AttackEvent : MonoBehaviour
       
         if (countTime >= absorbTime)
         {
-            absorption.SetActive(true);
+            absorption.SetActive(false);
 
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (gameObject.activeInHierarchy)
         {
@@ -53,16 +53,19 @@ public class AttackEvent : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 abc = asbcolor.red;
+                absorption.SetActive(false);
             }
             if (collision.gameObject.CompareTag("Note_Blue"))
             {
                 Destroy(collision.gameObject);
                 abc = asbcolor.blue;
+                absorption.SetActive(false);
             }
             if (collision.gameObject.CompareTag("Note_Green"))
             {
                 Destroy(collision.gameObject);
                 abc = asbcolor.green;
+                absorption.SetActive(false);
             }
         }
     }

@@ -22,11 +22,16 @@ public class PlayerControl : MonoBehaviour
     private float fDestroyTime = 3f;
     private float fTickTime;
 
+    AttackEvent ae;
+
 
     bool isHurt;
     SpriteRenderer sr;
     Color halfA = new Color(1, 1, 1, 0.5f);
     Color fullA = new Color(1, 1, 1, 1);
+
+    /*public Sprite playeratk;
+    Image playerImg;*/
    
 
     void Start()
@@ -35,14 +40,21 @@ public class PlayerControl : MonoBehaviour
         thePlayerHp = FindObjectOfType<PlayerHP>(); //PlayerHP ÂüÁ¶
         rb = GetComponent<Rigidbody2D>();
         jumpBtn = GameObject.Find("JumpButton");
-       
-        
-        
+
+        ae = FindObjectOfType<AttackEvent>();
+
+        //playerImg = GetComponent<Image>();
 
     }
 
     void Update()
     {
+        /*if(ae.absorption.activeSelf == false)
+        {
+            playerImg.sprite = playeratk;
+        }*/
+
+
         fTickTime += Time.deltaTime;
         if (thePlayerHp.player_currentHp != thePlayerHp.player_MaxHp)
         {
