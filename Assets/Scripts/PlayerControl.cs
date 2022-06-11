@@ -30,7 +30,7 @@ public class PlayerControl : MonoBehaviour
         thePlayerHp = FindObjectOfType<PlayerHP>(); //PlayerHP 참조
         rb = GetComponent<Rigidbody2D>();
         btn = GameObject.Find("JumpButton");
-       
+        
         
 
     }
@@ -66,12 +66,12 @@ public class PlayerControl : MonoBehaviour
     public void LButtonDown()
     {
         transform.Translate(-200, 10, 0);
-        jumpAllowed = false;
+        
     }
     public void RButtonDown()
     {
         transform.Translate(200, 10, 0);
-        jumpAllowed = false;
+      
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -100,9 +100,14 @@ public class PlayerControl : MonoBehaviour
         if (!isHurt)
         {
             isHurt = true;
-            thePlayerHp.DecreaseHP(0);
+            thePlayerHp.DecreaseHP(1);
+            Invoke("thePlayerHp.IncreaseHp(1)", 3);
+            //thePlayerHp.IncreaseHP(1);
         }
+
     }
+
+
 
     IEnumerator playerHpDelay() //체력바 1초동안 활성화
     {

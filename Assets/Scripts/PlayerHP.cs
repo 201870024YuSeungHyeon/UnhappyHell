@@ -26,6 +26,11 @@ public class PlayerHP : MonoBehaviour
         player_currentHp -= p_num; //파라미터 값만큼 체력감소
         SettingHPImage();
     }
+    public void IncreaseHP(int p_num)
+    {
+        player_currentHp += p_num;
+        SettingHPImage();
+    }
 
     void SettingHPImage() //체력 감소시 체력이미지 한 개씩 비활성화
     {
