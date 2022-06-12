@@ -7,16 +7,18 @@ public class AttackEvent : MonoBehaviour
     public GameObject absorption;
     public GameObject absorbBtn;
     PlayerControl playerControl;
+    public SpriteRenderer absorptionSprite;
 
 
     public bool isAbsorb;
     public bool Absorbmode;
     public bool Attackmode;
+   
 
-    enum asbcolor { red, blue, green }
+    enum asbcolor {normal, red, blue, green }
     asbcolor abc;
     
-    int r = 0, g = 0, b = 0;
+    public int r = 0, g = 0, b = 0;
 
     private float absorbTime = 0.1f;
     private float countTime;
@@ -26,8 +28,9 @@ public class AttackEvent : MonoBehaviour
     void Start()
     {
         absorption = GameObject.Find("Absorption");
+        absorptionSprite = GetComponent<SpriteRenderer>();
         absorbBtn = GameObject.Find("AbsorbButton");
-        absorption.SetActive(false);
+       
         playerControl = FindObjectOfType<PlayerControl>();
     }
 
@@ -35,16 +38,15 @@ public class AttackEvent : MonoBehaviour
     void Update()
     {
         transform.localPosition = playerControl.player_Pos + new Vector2(0,200);
+        
+        
+        
         countTime += Time.deltaTime;
         
-        Debug.Log(Attackmode + "공격모드");
-        Debug.Log(r + " r값");
-        Debug.Log(g + " r값");
-        Debug.Log(b + " r값");
-
-        if (countTime >= absorbTime)
+       if (countTime >= absorbTime)
         {
-            absorption.SetActive(false);
+
+            BarrierColorTransparency();
 
         }
     }
@@ -53,103 +55,164 @@ public class AttackEvent : MonoBehaviour
     {
         if (gameObject.activeInHierarchy)
         {
-            if (collision.gameObject.CompareTag("Note_Red"))
+            if (abc ==asbcolor.normal)
             {
-                Destroy(collision.gameObject);
-                abc = asbcolor.red;
-                absorption.SetActive(false);
-                isAbsorb = true;
-                Absorbmode = false;
+                if (collision.gameObject.CompareTag("Note_Red") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    abc = asbcolor.red;
+                    BarrierColorTransparency();
+                    isAbsorb = true;
+                    Absorbmode = false;
+
+
+                }
+                if (collision.gameObject.CompareTag("Note_Blue") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    abc = asbcolor.blue;
+                    BarrierColorTransparency();
+                    isAbsorb = true;
+                    Absorbmode = false;
+
+
+                }
+                if (collision.gameObject.CompareTag("Note_Green") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    abc = asbcolor.green;
+                    BarrierColorTransparency();
+                    isAbsorb = true;
+                    Absorbmode = false;
+
+                }
             }
-            else
+            if (abc == asbcolor.red)
             {
-                isAbsorb = false;
-                Absorbmode = false;
+                if (abc == asbcolor.red && collision.gameObject.CompareTag("Note_Red") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    Attackmode = true;
+                    Debug.Log("공격모드 활성화");
+                    abc = asbcolor.normal;
+                    r = 1;
+                    g = 0;
+                    b = 0;
+
+
+
+                }
+                else if(abc ==asbcolor.red && collision.gameObject.CompareTag("Note_Blue") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    Attackmode = false;
+                    abc = asbcolor.blue;
+                   
+                }
+                else if(abc== asbcolor.red && collision.gameObject.CompareTag("Note_Green") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    Attackmode = false;
+                    abc = asbcolor.green;
+                }
 
             }
-            if (collision.gameObject.CompareTag("Note_Blue"))
+           else  if (abc == asbcolor.blue)
             {
-                Destroy(collision.gameObject);
-                abc = asbcolor.blue;
-                absorption.SetActive(false);
-                isAbsorb = true;
-            }
-            else
-            {
-                isAbsorb = false;
-                Absorbmode = false;
+
+
+                if (abc == asbcolor.blue && collision.gameObject.CompareTag("Note_Blue") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    Attackmode = true;
+                    Debug.Log("공격모드 활성화");
+                    abc = asbcolor.normal;
+                    r = 0;
+                    b = 1;
+                    g = 0;
+
+
+                }
+                else if(abc == asbcolor.blue && collision.gameObject.CompareTag("Note_Red") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    Attackmode = false;
+                    abc = asbcolor.red;
+
+                }
+                else if (abc == asbcolor.blue && collision.gameObject.CompareTag("Note_Green") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    Attackmode = false;
+                    abc = asbcolor.green;
+                }
             }
 
-            if (collision.gameObject.CompareTag("Note_Green"))
+           else  if (abc == asbcolor.green)
             {
-                Destroy(collision.gameObject);
-                abc = asbcolor.green;
-                absorption.SetActive(false);
-                isAbsorb = true;
+                if (abc == asbcolor.green && collision.gameObject.CompareTag("Note_Green") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    Attackmode = true;
+                    Debug.Log("공격모드 활성화");
+                    abc = asbcolor.normal;
+                    r = 0;
+                    b = 0;
+                    g = 1;
+
+                }
+                else if (abc == asbcolor.green && collision.gameObject.CompareTag("Note_Blue") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    Attackmode = false;
+                    abc = asbcolor.blue;
+
+                }
+                else if (abc == asbcolor.green && collision.gameObject.CompareTag("Note_Red") && Absorbmode == true)
+                {
+                    Destroy(collision.gameObject);
+                    Attackmode = false;
+                    abc = asbcolor.red;
+                }
             }
-            else{
-                isAbsorb = false;
-                Absorbmode = false;
-            }
+         
         }
     }
 
     public void AbsorbButtonDown()
     {
-        if(Attackmode == false) { 
         countTime = 0;
-        absorption.SetActive(true);
+        BarrierUnColorTransparency();
+        
+        
+        if(Attackmode == false) { 
+
         Absorbmode = true;
         }
        
         if (Attackmode == true)
         {
-            absorption.SetActive(false);
+            
             Debug.Log("공격 발사됨");
             Attackmode = false;
+            abc = asbcolor.normal;
             r = 0;
             g = 0;
             b = 0;
+           
         }
+    }
+    public void BarrierColorTransparency() // 흡수 투명도 0
+    {
        
-        if (Absorbmode == true)
-        {
-            
-            if (isAbsorb == true)
-            {
-
-                if (abc == asbcolor.red)
-                {
-                    r = 1; g = 0; b = 0;
-                    if (r == 1)
-                    {
-                        Attackmode = true;
-                        r = 0;
-                    }
-                }
-                if (abc == asbcolor.blue)
-                {
-                    b = 1; r = 0; g = 0;
-                    if (b == 1)
-                    {
-                        Attackmode = true;
-                        b = 0;
-                    }
-                }
-                if (abc == asbcolor.green)
-                {
-                    g =1; r = 0; b = 0;
-                    if (g == 1)
-                    {
-                        Attackmode = true;
-                        g = 0;
-                    }
-                }
-
-
-            }
-
-        }
+        absorptionSprite.color = new Color(0, 100, 100, 0f);
+        absorption.GetComponent<BoxCollider2D>().enabled = false;
+    }
+    public void BarrierUnColorTransparency() //흡수 투명도 100
+    {
+      
+        absorptionSprite.color = new Color(0, 0, 0, 1f);
+        absorption.GetComponent<BoxCollider2D>().enabled = true;
     }
 
 }
