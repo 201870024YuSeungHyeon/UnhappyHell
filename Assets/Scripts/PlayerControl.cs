@@ -133,7 +133,7 @@ public class PlayerControl : MonoBehaviour
         if (!isHurt)
         {
             isHurt = true;
-            thePlayerHp.DecreaseHP(0);
+            thePlayerHp.DecreaseHP(1);
             fTickTime = 0.0f;
         }
 
@@ -155,15 +155,15 @@ public class PlayerControl : MonoBehaviour
     IEnumerator alphaBlink()
     {
         sr.color = halfA;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
         sr.color = fullA;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
         sr.color = halfA;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
         sr.color = fullA;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
         sr.color = halfA;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
         sr.color = fullA;
     }
 }
