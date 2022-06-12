@@ -6,9 +6,7 @@ public class AttackEvent : MonoBehaviour
 {
     public GameObject absorption;
     public GameObject absorbBtn;
-    PlayerControl playerControl;
     public SpriteRenderer absorptionSprite;
-
 
     public bool isAbsorb;
     public bool Absorbmode;
@@ -23,7 +21,8 @@ public class AttackEvent : MonoBehaviour
     private float absorbTime = 0.1f;
     private float countTime;
 
-
+    PlayerControl playerControl;
+    AttackEvent attackEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,9 +44,8 @@ public class AttackEvent : MonoBehaviour
         
        if (countTime >= absorbTime)
         {
-
             BarrierColorTransparency();
-
+            playerControl.ganglimAtk.sprite = playerControl.Change_Ganglin_Idle;
         }
     }
 
@@ -183,8 +181,8 @@ public class AttackEvent : MonoBehaviour
     {
         countTime = 0;
         BarrierUnColorTransparency();
-        
-        
+        playerControl.ganglimAtk.sprite = playerControl.Change_GanglimAtk;
+
         if(Attackmode == false) { 
 
         Absorbmode = true;
@@ -192,25 +190,21 @@ public class AttackEvent : MonoBehaviour
        
         if (Attackmode == true)
         {
-            
             Debug.Log("°ø°Ý ¹ß»çµÊ");
             Attackmode = false;
             abc = asbcolor.normal;
             r = 0;
             g = 0;
             b = 0;
-           
         }
     }
     public void BarrierColorTransparency() // Èí¼ö Åõ¸íµµ 0
     {
-       
         absorptionSprite.color = new Color(0, 100, 100, 0f);
         absorption.GetComponent<BoxCollider2D>().enabled = false;
     }
     public void BarrierUnColorTransparency() //Èí¼ö Åõ¸íµµ 100
     {
-      
         absorptionSprite.color = new Color(0, 0, 0, 1f);
         absorption.GetComponent<BoxCollider2D>().enabled = true;
     }

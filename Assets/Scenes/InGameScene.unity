@@ -352,6 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chage_img_AnubisLow: {fileID: 21300000, guid: 9c72cecf6ed879a4c81935de8a4bc303, type: 3}
   chage_img_AnubisDead: {fileID: 21300000, guid: 6b2a5061d28355b4da8fa3b4fd07a7cd, type: 3}
+  BossHP: 15
 --- !u!222 &240188676
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1603,6 +1604,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 180000
   player_Pos: {x: 0, y: 0}
+  Change_GanglimAtk: {fileID: 21300000, guid: e22a0a6d2c59d1747998627aea377c1a, type: 3}
+  Change_Ganglin_Idle: {fileID: 21300000, guid: 491130919d8e0b04a80d1e516ec4d56c, type: 3}
+  ganglimAtk: {fileID: 0}
   jumpBtn: {fileID: 0}
 --- !u!61 &1182811968
 BoxCollider2D:

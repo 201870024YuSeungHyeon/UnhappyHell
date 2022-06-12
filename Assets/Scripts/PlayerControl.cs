@@ -7,9 +7,12 @@ using UnityEngine.UI;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] float jumpForce;
-    public Vector2 player_Pos; 
-    //Vector2 firstPressPos, secondPressPos, currentSwipe;
-   
+    public Vector2 player_Pos;
+
+    public Sprite Change_GanglimAtk, Change_Ganglin_Idle;
+    public SpriteRenderer ganglimAtk;
+    
+
     private Rigidbody2D rb;
    
     bool jumpAllowed =false;
@@ -37,10 +40,10 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        thePlayerHp = FindObjectOfType<PlayerHP>(); //PlayerHP 참조
+        ganglimAtk = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         jumpBtn = GameObject.Find("JumpButton");
-
+        thePlayerHp = FindObjectOfType<PlayerHP>(); //PlayerHP 참조
         ae = FindObjectOfType<AttackEvent>();
 
         //playerImg = GetComponent<Image>();
@@ -125,10 +128,6 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-   
-
-
-
     public void Hurt()
     {
         if (!isHurt)
@@ -139,8 +138,6 @@ public class PlayerControl : MonoBehaviour
         }
 
     }
-
-  
 
     IEnumerator playerHpDelay() //체력바 1초동안 활성화
     {
