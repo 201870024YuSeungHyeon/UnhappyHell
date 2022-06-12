@@ -17,16 +17,9 @@ public class Attack_Manager : MonoBehaviour
     }
 
     void Update()
-    {
-        
+    {      
+        ShootAttack();       
     }
-
-    public void AttackButtonDown()
-    {
-        ShootAttack();
-       
-    }
-
 
     public void ShootAttack()
     {
@@ -34,16 +27,20 @@ public class Attack_Manager : MonoBehaviour
         {
             GameObject t_attack = Instantiate(AttackPrefab[0], tfNoteAppear.position, Quaternion.identity);
             t_attack.transform.SetParent(this.transform);
+            attackEvent.Attackmode = false;
+
         }
         if (attackEvent.Attackmode == true && attackEvent.b == 1)
         {
             GameObject t_attack = Instantiate(AttackPrefab[1], tfNoteAppear.position, Quaternion.identity);
             t_attack.transform.SetParent(this.transform);
+            attackEvent.Attackmode = false;
         }
         if (attackEvent.Attackmode == true && attackEvent.g == 1)
         {
             GameObject t_attack = Instantiate(AttackPrefab[2], tfNoteAppear.position, Quaternion.identity);
             t_attack.transform.SetParent(this.transform);
+            attackEvent.Attackmode = false;
         }
     }
 

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3719012605553222085}
   m_Layer: 11
   m_Name: Attack_Green
-  m_TagString: Note
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -22,6 +22,10 @@ public class Note_Non_delete : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        if (collision.CompareTag("Attack"))
+        {
+            Destroy(collision.gameObject);
+        }
 
     }
 }
