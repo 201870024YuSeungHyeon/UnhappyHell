@@ -134,7 +134,7 @@ public class PlayerControl : MonoBehaviour
         if (!isHurt)
         {
             isHurt = true;
-            thePlayerHp.DecreaseHP(1);
+            thePlayerHp.DecreaseHP(0);
             fTickTime = 0.0f;
         }
 

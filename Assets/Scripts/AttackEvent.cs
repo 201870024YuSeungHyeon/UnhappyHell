@@ -36,8 +36,12 @@ public class AttackEvent : MonoBehaviour
     {
         transform.localPosition = playerControl.player_Pos + new Vector2(0,200);
         countTime += Time.deltaTime;
-        //Debug.Log(r + " " + g + " " + b);
-      
+        
+        Debug.Log(Attackmode + "공격모드");
+        Debug.Log(r + " r값");
+        Debug.Log(g + " r값");
+        Debug.Log(b + " r값");
+
         if (countTime >= absorbTime)
         {
             absorption.SetActive(false);
@@ -54,37 +58,70 @@ public class AttackEvent : MonoBehaviour
                 Destroy(collision.gameObject);
                 abc = asbcolor.red;
                 absorption.SetActive(false);
+                isAbsorb = true;
+                Absorbmode = false;
+            }
+            else
+            {
+                isAbsorb = false;
+                Absorbmode = false;
+
             }
             if (collision.gameObject.CompareTag("Note_Blue"))
             {
                 Destroy(collision.gameObject);
                 abc = asbcolor.blue;
                 absorption.SetActive(false);
+                isAbsorb = true;
             }
+            else
+            {
+                isAbsorb = false;
+                Absorbmode = false;
+            }
+
             if (collision.gameObject.CompareTag("Note_Green"))
             {
                 Destroy(collision.gameObject);
                 abc = asbcolor.green;
                 absorption.SetActive(false);
+                isAbsorb = true;
+            }
+            else{
+                isAbsorb = false;
+                Absorbmode = false;
             }
         }
     }
 
     public void AbsorbButtonDown()
     {
+        if(Attackmode == false) { 
         countTime = 0;
         absorption.SetActive(true);
+        Absorbmode = true;
+        }
        
-        if (!Absorbmode)
+        if (Attackmode == true)
         {
-            Absorbmode = true;
-            if (isAbsorb)
+            absorption.SetActive(false);
+            Debug.Log("공격 발사됨");
+            Attackmode = false;
+            r = 0;
+            g = 0;
+            b = 0;
+        }
+       
+        if (Absorbmode == true)
+        {
+            
+            if (isAbsorb == true)
             {
 
                 if (abc == asbcolor.red)
                 {
-                    r++; g = 0; b = 0;
-                    if (r == 2)
+                    r = 1; g = 0; b = 0;
+                    if (r == 1)
                     {
                         Attackmode = true;
                         r = 0;
@@ -92,8 +129,8 @@ public class AttackEvent : MonoBehaviour
                 }
                 if (abc == asbcolor.blue)
                 {
-                    b++; r = 0; g = 0;
-                    if (b == 2)
+                    b = 1; r = 0; g = 0;
+                    if (b == 1)
                     {
                         Attackmode = true;
                         b = 0;
@@ -101,8 +138,8 @@ public class AttackEvent : MonoBehaviour
                 }
                 if (abc == asbcolor.green)
                 {
-                    g++; r = 0; b = 0;
-                    if (g == 2)
+                    g =1; r = 0; b = 0;
+                    if (g == 1)
                     {
                         Attackmode = true;
                         g = 0;
@@ -114,6 +151,7 @@ public class AttackEvent : MonoBehaviour
 
         }
     }
+
 }
 
 
