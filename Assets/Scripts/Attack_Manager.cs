@@ -13,7 +13,7 @@ public class Attack_Manager : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        attackEvent = FindObjectOfType<AttackEvent>(); //PlayerControl참조하기
+        attackEvent = FindObjectOfType<AttackEvent>(); //PlayerControl참조하기       
     }
 
     void Update()
