@@ -352,7 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chage_img_AnubisLow: {fileID: 21300000, guid: 9c72cecf6ed879a4c81935de8a4bc303, type: 3}
   chage_img_AnubisDead: {fileID: 21300000, guid: 6b2a5061d28355b4da8fa3b4fd07a7cd, type: 3}
-  BossHP: 15
+  BossHP: 5
 --- !u!222 &240188676
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a82cb64b0de75ff45ad3ae9cb5060096, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.025
+  m_Volume: 0.507
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1068,7 +1068,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: f3df81cc27ce66f458fa9098c272eeea, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1608,6 +1608,8 @@ MonoBehaviour:
   Change_Ganglin_Idle: {fileID: 21300000, guid: 491130919d8e0b04a80d1e516ec4d56c, type: 3}
   ganglimAtk: {fileID: 0}
   jumpBtn: {fileID: 0}
+  LeftBtn: {fileID: 0}
+  RightBtn: {fileID: 0}
 --- !u!61 &1182811968
 BoxCollider2D:
   m_ObjectHideFlags: 0

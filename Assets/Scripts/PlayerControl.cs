@@ -20,6 +20,8 @@ public class PlayerControl : MonoBehaviour
     PlayerHP thePlayerHp; //PlayerHp참조 변수
    
     public GameObject jumpBtn;
+    public GameObject LeftBtn;
+    public GameObject RightBtn;
 
 
     private float fDestroyTime = 3f;
@@ -43,6 +45,8 @@ public class PlayerControl : MonoBehaviour
         ganglimAtk = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         jumpBtn = GameObject.Find("JumpButton");
+        LeftBtn = GameObject.Find("LButton");
+        RightBtn = GameObject.Find("RButton");
         thePlayerHp = FindObjectOfType<PlayerHP>(); //PlayerHP 참조
         ae = FindObjectOfType<AttackEvent>();
 
@@ -97,12 +101,29 @@ public class PlayerControl : MonoBehaviour
 
     public void LButtonDown()
     {
-        transform.Translate(-200, 10, 0);
+        
+        
+        if(gameObject.transform.position.x != 131)
+        {
+            transform.Translate(-200, 10, 0);
+        }
+        else if(gameObject.transform.position.x > 131)
+        {
+            transform.Translate(0, 10, 0);
+        }
         
     }
     public void RButtonDown()
     {
-        transform.Translate(200, 10, 0);
+        
+        if(gameObject.transform.position.x != 931)
+        {
+            transform.Translate(200, 10, 0);
+        }
+        else if(gameObject.transform.position.x < 931)
+        {
+            transform.Translate(0, 10, 0);
+        }
       
     }
 
@@ -133,7 +154,7 @@ public class PlayerControl : MonoBehaviour
         if (!isHurt)
         {
             isHurt = true;
-            thePlayerHp.DecreaseHP(0);
+            thePlayerHp.DecreaseHP(1);
             fTickTime = 0.0f;
         }
 
@@ -155,15 +176,15 @@ public class PlayerControl : MonoBehaviour
     IEnumerator alphaBlink()
     {
         sr.color = halfA;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
         sr.color = fullA;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
         sr.color = halfA;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
         sr.color = fullA;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
         sr.color = halfA;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
         sr.color = fullA;
     }
 }

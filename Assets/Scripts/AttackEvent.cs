@@ -37,9 +37,10 @@ public class AttackEvent : MonoBehaviour
     void Update()
     {
         transform.localPosition = playerControl.player_Pos + new Vector2(0,200);
-        
-        
-        
+
+       
+
+      
         countTime += Time.deltaTime;
         
        if (countTime >= absorbTime)
@@ -180,6 +181,7 @@ public class AttackEvent : MonoBehaviour
     public void AbsorbButtonDown()
     {
         countTime = 0;
+        StartCoroutine("AttackCooldown");
         BarrierUnColorTransparency();
         playerControl.ganglimAtk.sprite = playerControl.Change_GanglimAtk;
 
@@ -207,6 +209,13 @@ public class AttackEvent : MonoBehaviour
     {
         absorptionSprite.color = new Color(0, 0, 0, 1f);
         absorption.GetComponent<BoxCollider2D>().enabled = true;
+    }
+
+    IEnumerator AttackCooldown()
+    {
+        absorbBtn.SetActive(false);
+        yield return new WaitForSeconds(0.7f);
+        absorbBtn.SetActive(true);
     }
 
 }
