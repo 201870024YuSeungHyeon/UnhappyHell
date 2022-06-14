@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
 {
     [SerializeField] float jumpForce;
     public Vector2 player_Pos;
+    public AudioSource audioEnemyCollision;
 
     public Sprite Change_GanglimAtk, Change_Ganglin_Idle;
     public SpriteRenderer ganglimAtk;
@@ -19,9 +20,9 @@ public class PlayerControl : MonoBehaviour
    
     PlayerHP thePlayerHp; //PlayerHp참조 변수
    
-    public GameObject jumpBtn;
-    public GameObject LeftBtn;
-    public GameObject RightBtn;
+    GameObject jumpBtn;
+    GameObject LeftBtn;
+    GameObject RightBtn;
 
 
     private float fDestroyTime = 3f;
@@ -139,6 +140,7 @@ public class PlayerControl : MonoBehaviour
                 StartCoroutine(playerHpDelay());
 
                 Destroy(collision.gameObject);
+                audioEnemyCollision.Play();
             }
             if (collision.gameObject.CompareTag("Ground"))
             {

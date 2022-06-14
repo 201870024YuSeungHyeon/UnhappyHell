@@ -5,6 +5,7 @@ using UnityEngine;
 public class Note_Non_delete : MonoBehaviour
 {
     BossStatus bossStatus;
+    public AudioSource audioEnemyCollision;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,8 @@ public class Note_Non_delete : MonoBehaviour
             Destroy(collision.gameObject);
             bossStatus.BossHP -= 1;
             Debug.Log(bossStatus.BossHP);
+            audioEnemyCollision.Play();
         }
 
-    }
+    }   
 }
