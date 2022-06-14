@@ -32,6 +32,7 @@ public class PlayerControl : MonoBehaviour
 
 
     bool isHurt;
+    bool isSound = true;
     SpriteRenderer sr;
     Color halfA = new Color(1, 1, 1, 0.5f);
     Color fullA = new Color(1, 1, 1, 1);
@@ -136,11 +137,14 @@ public class PlayerControl : MonoBehaviour
             {
                 Hurt();
                 StartCoroutine(HurtRoutine());
+
+                PlayerHitSound();
+                StartCoroutine(SoundRoutine());
+
                 StartCoroutine(alphaBlink());
                 StartCoroutine(playerHpDelay());
 
                 Destroy(collision.gameObject);
-                audioEnemyCollision.Play();
             }
             if (collision.gameObject.CompareTag("Ground"))
             {
@@ -150,7 +154,14 @@ public class PlayerControl : MonoBehaviour
         }
 
     }
-
+    public void PlayerHitSound()
+    {
+        if(isSound)
+        {
+            isSound = false;
+            audioEnemyCollision.Play();
+        }
+    }
     public void Hurt()
     {
         if (!isHurt)
@@ -175,6 +186,12 @@ public class PlayerControl : MonoBehaviour
         isHurt = false;
     }
 
+    IEnumerator SoundRoutine()
+    {
+        yield return new WaitForSeconds(1f);
+        isSound = true;
+    }
+
     IEnumerator alphaBlink()
     {
         sr.color = halfA;
@@ -189,4 +206,6 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         sr.color = fullA;
     }
+
+    
 }

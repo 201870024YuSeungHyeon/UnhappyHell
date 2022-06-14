@@ -351,8 +351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc3dcd8b0511f14b89dd157f757c79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  change_img_Nomal: {fileID: 21300000, guid: 9a4bb05a12d0c68439c2251e1f0b1c83, type: 3}
   chage_img_AnubisLow: {fileID: 21300000, guid: 9c72cecf6ed879a4c81935de8a4bc303, type: 3}
   chage_img_AnubisDead: {fileID: 21300000, guid: 6b2a5061d28355b4da8fa3b4fd07a7cd, type: 3}
+  thisImg: {fileID: 0}
   BossHP: 5
 --- !u!222 &240188676
 CanvasRenderer:
