@@ -6,6 +6,7 @@ public class Note_Non_delete : MonoBehaviour
 {
     BossStatus bossStatus;
     public AudioSource audioEnemyCollision;
+    public AudioSource boss_Dead;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,10 @@ public class Note_Non_delete : MonoBehaviour
             bossStatus.BossHP -= 1;
             Debug.Log(bossStatus.BossHP);
             StartCoroutine(BossHitImage());
-            audioEnemyCollision.Play();
+            if (bossStatus.BossHP != 0)
+                audioEnemyCollision.Play();
+            else
+                boss_Dead.Play();
         }
     }   
 
