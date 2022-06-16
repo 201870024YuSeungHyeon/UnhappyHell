@@ -14,6 +14,9 @@ public class AttackEvent : MonoBehaviour
    
 
     enum asbcolor {normal, red, blue, green }
+    public enum beadB {normal, red, blue, green}
+
+    public beadB bead;
     asbcolor abc;
     
     public int r = 0, g = 0, b = 0;
@@ -22,7 +25,7 @@ public class AttackEvent : MonoBehaviour
     private float countTime;
 
     PlayerControl playerControl;
-    AttackEvent attackEvent;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +59,7 @@ public class AttackEvent : MonoBehaviour
         {
             if (abc ==asbcolor.normal)
             {
+                bead = beadB.normal;
                 if (collision.gameObject.CompareTag("Note_Red") && Absorbmode == true)
                 {
                     Destroy(collision.gameObject);
@@ -63,7 +67,7 @@ public class AttackEvent : MonoBehaviour
                     BarrierColorTransparency();
                     isAbsorb = true;
                     Absorbmode = false;
-
+                    
 
                 }
                 if (collision.gameObject.CompareTag("Note_Blue") && Absorbmode == true)
@@ -88,6 +92,7 @@ public class AttackEvent : MonoBehaviour
             }
             if (abc == asbcolor.red)
             {
+                bead = beadB.red;
                 if (abc == asbcolor.red && collision.gameObject.CompareTag("Note_Red") && Absorbmode == true)
                 {
                     Destroy(collision.gameObject);
@@ -97,7 +102,7 @@ public class AttackEvent : MonoBehaviour
                     r = 1;
                     g = 0;
                     b = 0;
-
+                    bead = beadB.normal;
 
 
                 }
@@ -106,20 +111,22 @@ public class AttackEvent : MonoBehaviour
                     Destroy(collision.gameObject);
                     Attackmode = false;
                     abc = asbcolor.blue;
-                   
+                    bead = beadB.blue;
+
                 }
                 else if(abc== asbcolor.red && collision.gameObject.CompareTag("Note_Green") && Absorbmode == true)
                 {
                     Destroy(collision.gameObject);
                     Attackmode = false;
                     abc = asbcolor.green;
+                    bead = beadB.green;
                 }
 
             }
            else  if (abc == asbcolor.blue)
             {
 
-
+                bead = beadB.blue;
                 if (abc == asbcolor.blue && collision.gameObject.CompareTag("Note_Blue") && Absorbmode == true)
                 {
                     Destroy(collision.gameObject);
@@ -129,7 +136,7 @@ public class AttackEvent : MonoBehaviour
                     r = 0;
                     b = 1;
                     g = 0;
-
+                    bead = beadB.normal;
 
                 }
                 else if(abc == asbcolor.blue && collision.gameObject.CompareTag("Note_Red") && Absorbmode == true)
@@ -137,6 +144,7 @@ public class AttackEvent : MonoBehaviour
                     Destroy(collision.gameObject);
                     Attackmode = false;
                     abc = asbcolor.red;
+                    bead = beadB.red;
 
                 }
                 else if (abc == asbcolor.blue && collision.gameObject.CompareTag("Note_Green") && Absorbmode == true)
@@ -144,11 +152,13 @@ public class AttackEvent : MonoBehaviour
                     Destroy(collision.gameObject);
                     Attackmode = false;
                     abc = asbcolor.green;
+                    bead = beadB.green;
                 }
             }
 
            else  if (abc == asbcolor.green)
             {
+                bead = beadB.green;
                 if (abc == asbcolor.green && collision.gameObject.CompareTag("Note_Green") && Absorbmode == true)
                 {
                     Destroy(collision.gameObject);
@@ -158,20 +168,21 @@ public class AttackEvent : MonoBehaviour
                     r = 0;
                     b = 0;
                     g = 1;
-
+                    bead = beadB.normal;
                 }
                 else if (abc == asbcolor.green && collision.gameObject.CompareTag("Note_Blue") && Absorbmode == true)
                 {
                     Destroy(collision.gameObject);
                     Attackmode = false;
                     abc = asbcolor.blue;
-
+                    bead = beadB.blue;
                 }
                 else if (abc == asbcolor.green && collision.gameObject.CompareTag("Note_Red") && Absorbmode == true)
                 {
                     Destroy(collision.gameObject);
                     Attackmode = false;
                     abc = asbcolor.red;
+                    bead = beadB.red;
                 }
             }
          
