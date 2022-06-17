@@ -24,7 +24,7 @@ public class PausePageControl : MonoBehaviour
 
     public void QuitButton()
     {
-
-        SceneManager.LoadScene("StageScene");
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainScene");
     }
 }
