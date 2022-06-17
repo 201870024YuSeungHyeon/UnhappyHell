@@ -25,20 +25,51 @@ public class Note_Non_delete : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-
+        
         if (collision.CompareTag("Attack"))
         {
-            Destroy(collision.gameObject);
-            bossStatus.BossHP -= 1;
-            Debug.Log(bossStatus.BossHP);
-            StartCoroutine(BossHitImage());
+            if (bossStatus.BossHP >= 3)
+            {
+                Destroy(collision.gameObject);
+                bossStatus.BossHP -= 1;
+                Debug.Log(bossStatus.BossHP);
+                StartCoroutine(BossHitImage());
 
-            if (bossStatus.BossHP != 0)
-                audioEnemyCollision.Play();
-            else
-                boss_Dead.Play();
+                if (bossStatus.BossHP != 0)
+                    audioEnemyCollision.Play();
+                else
+                    boss_Dead.Play();
+
+            }
+
+            else if (bossStatus.BossHP <= 2)
+            {
+
+                Destroy(collision.gameObject);
+                bossStatus.BossHP -= 1;
+                Debug.Log(bossStatus.BossHP);
+
+                //StopCoroutine(BossHitImage());
+
+                StartCoroutine(BossHitImageLow());
+
+                if (bossStatus.BossHP != 0)
+                    audioEnemyCollision.Play();
+                else
+                    boss_Dead.Play();
+            }
+            else if (bossStatus.BossHP == 0)
+            {
+                
+                if (bossStatus.BossHP != 0)
+                    audioEnemyCollision.Play();
+                else
+                    boss_Dead.Play();
+
+            }
         }
-    }   
+    }
+    
 
     IEnumerator BossHitImage()
     {
@@ -46,6 +77,12 @@ public class Note_Non_delete : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.4f);
         bossStatus.thisImg.sprite = bossStatus.change_img_Nomal;
     }
+    IEnumerator BossHitImageLow()
+    {
+        bossStatus.thisImg.sprite = bossStatus.change_img_AnubisHit;
+        yield return new WaitForSecondsRealtime(0.4f);
+        bossStatus.thisImg.sprite = bossStatus.chage_img_AnubisLow;
+    }
 
-    
+
 }
