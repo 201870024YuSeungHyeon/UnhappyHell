@@ -19,17 +19,13 @@ public class BossStatus : MonoBehaviour
     {
         BossHPtime -= Time.deltaTime;
 
-        if (BossHP <= 0) //보스체력이 0이면 AnubisDead이미지로 변경
+        if(BossHP <= 0)
         {
             thisImg.sprite = chage_img_AnubisDead;
- //           ExitGame();
         }
-        else if (BossHP <= 2) //보스체력이 7이하면 AnubisLow이미지로 변경
-        {
-            thisImg.sprite = chage_img_AnubisLow; 
-        }
+      
 
-        if(BossHPtime<= 0)
+       if(BossHPtime<= 0)
         {
             thisImg.sprite = chage_img_AnubisDead;
         }

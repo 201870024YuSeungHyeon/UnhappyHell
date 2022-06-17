@@ -44,7 +44,7 @@ public class Note_Non_delete : MonoBehaviour
 
             else if (bossStatus.BossHP <= 2)
             {
-
+                bossStatus.thisImg.sprite = bossStatus.chage_img_AnubisLow;
                 Destroy(collision.gameObject);
                 bossStatus.BossHP -= 1;
                 Debug.Log(bossStatus.BossHP);
@@ -60,7 +60,9 @@ public class Note_Non_delete : MonoBehaviour
             }
             else if (bossStatus.BossHP == 0)
             {
-                
+                StopCoroutine(BossHitImage());
+                StopCoroutine(BossHitImageLow());
+                bossStatus.thisImg.sprite = bossStatus.chage_img_AnubisDead;
                 if (bossStatus.BossHP != 0)
                     audioEnemyCollision.Play();
                 else
