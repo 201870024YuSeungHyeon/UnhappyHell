@@ -32,6 +32,7 @@ public class Note_Non_delete : MonoBehaviour
             bossStatus.BossHP -= 1;
             Debug.Log(bossStatus.BossHP);
             StartCoroutine(BossHitImage());
+
             if (bossStatus.BossHP != 0)
                 audioEnemyCollision.Play();
             else
@@ -41,7 +42,7 @@ public class Note_Non_delete : MonoBehaviour
 
     IEnumerator BossHitImage()
     {
-        bossStatus.thisImg.sprite = bossStatus.chage_img_AnubisLow;
+        bossStatus.thisImg.sprite = bossStatus.change_img_AnubisHit;
         yield return new WaitForSecondsRealtime(0.4f);
         bossStatus.thisImg.sprite = bossStatus.change_img_Nomal;
     }
