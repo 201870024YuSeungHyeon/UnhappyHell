@@ -486,6 +486,7 @@ MonoBehaviour:
   change_img_Nomal: {fileID: 21300000, guid: 9a4bb05a12d0c68439c2251e1f0b1c83, type: 3}
   chage_img_AnubisLow: {fileID: 21300000, guid: 9c72cecf6ed879a4c81935de8a4bc303, type: 3}
   chage_img_AnubisDead: {fileID: 21300000, guid: 6b2a5061d28355b4da8fa3b4fd07a7cd, type: 3}
+  change_img_AnubisHit: {fileID: 21300000, guid: b27176ab344f2e845bbb44a804fec309, type: 3}
   thisImg: {fileID: 0}
   BossHP: 5
 --- !u!222 &240188676
