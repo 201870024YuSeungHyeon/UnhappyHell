@@ -5,27 +5,24 @@ using UnityEngine;
 public class Pause : MonoBehaviour
 {
     public AudioSource mainBGM;
-    bool IsPause;
+    public GameObject pausePage;
+    public GameObject pausePanel;
+    public bool IsPause;
 
     void Start()
     {
         mainBGM.Play();
         IsPause = false;
+        pausePage.SetActive(false);
+        pausePanel.SetActive(false);
     }
 
     public void PauseButtonDown()
     {
-        if ( IsPause == false )
-        {
-            Time.timeScale = 0;
-            mainBGM.Pause();
-            IsPause = true;
-        }
-        else
-        {
-            Time.timeScale = 1;
-            mainBGM.Play();
-            IsPause = false;
-        }
+        Time.timeScale = 0;
+        mainBGM.Pause();
+        pausePage.SetActive(true);
+        pausePanel.SetActive(true);
+        IsPause = true;
     }
 }
