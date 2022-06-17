@@ -488,7 +488,7 @@ MonoBehaviour:
   chage_img_AnubisDead: {fileID: 21300000, guid: 6b2a5061d28355b4da8fa3b4fd07a7cd, type: 3}
   change_img_AnubisHit: {fileID: 21300000, guid: b27176ab344f2e845bbb44a804fec309, type: 3}
   thisImg: {fileID: 0}
-  BossHP: 5
+  BossHP: 1
 --- !u!222 &240188676
 CanvasRenderer:
   m_ObjectHideFlags: 0

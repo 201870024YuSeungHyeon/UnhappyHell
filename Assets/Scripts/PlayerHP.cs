@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHP : MonoBehaviour
 {
@@ -19,7 +20,12 @@ public class PlayerHP : MonoBehaviour
     {
         transform.localPosition = playerControl.player_Pos; //체력바의 좌표와 강림의 좌표값 일치
         if (player_currentHp == 0) //체력이 0되면 게임 끝
-            ExitGame();
+            Change();
+    }
+
+    public void Change() //씬 전환
+    {
+        SceneManager.LoadScene("FailScene");
     }
 
     public void DecreaseHP(int p_num) //데미지입을때 호출

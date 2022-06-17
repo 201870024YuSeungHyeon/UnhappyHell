@@ -59,7 +59,7 @@ public class Note_Non_delete : MonoBehaviour
                 else
                     boss_Dead.Play();
             }
-            else if (bossStatus.BossHP == 0)
+            if (bossStatus.BossHP == 0)
             {
                 StopCoroutine(BossHitImage());
                 StopCoroutine(BossHitImageLow());
