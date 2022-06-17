@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Note_Non_delete : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class Note_Non_delete : MonoBehaviour
         
         if (collision.CompareTag("Attack"))
         {
-            if (bossStatus.BossHP >= 3)
+            if (bossStatus.BossHP >= 4)
             {
                 Destroy(collision.gameObject);
                 bossStatus.BossHP -= 1;
@@ -42,7 +43,7 @@ public class Note_Non_delete : MonoBehaviour
 
             }
 
-            else if (bossStatus.BossHP <= 2)
+            else if (bossStatus.BossHP <= 3)
             {
                 bossStatus.thisImg.sprite = bossStatus.chage_img_AnubisLow;
                 Destroy(collision.gameObject);
@@ -63,15 +64,23 @@ public class Note_Non_delete : MonoBehaviour
                 StopCoroutine(BossHitImage());
                 StopCoroutine(BossHitImageLow());
                 bossStatus.thisImg.sprite = bossStatus.chage_img_AnubisDead;
+                Change();
                 if (bossStatus.BossHP != 0)
                     audioEnemyCollision.Play();
                 else
+                {
                     boss_Dead.Play();
-
+                   
+                }               
             }
         }
     }
-    
+
+    public void Change() //¾À ÀüÈ¯
+    {
+        SceneManager.LoadScene("ClearScene");
+    }
+
 
     IEnumerator BossHitImage()
     {
