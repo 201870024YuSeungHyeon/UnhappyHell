@@ -19,8 +19,10 @@ public class PlayerHP : MonoBehaviour
     void Update()
     {
         transform.localPosition = playerControl.player_Pos; //체력바의 좌표와 강림의 좌표값 일치
-        if (player_currentHp == 0) //체력이 0되면 게임 끝
-            Change();
+        if (player_currentHp == 0)
+        {           
+            Invoke("Change", 1f);
+        } //체력이 0되면 게임 끝
     }
 
     public void Change() //씬 전환
@@ -30,8 +32,11 @@ public class PlayerHP : MonoBehaviour
 
     public void DecreaseHP(int p_num) //데미지입을때 호출
     {
-        player_currentHp -= p_num; //파라미터 값만큼 체력감소
-        SettingHPImage();
+        if(player_currentHp > 0)
+        {
+            player_currentHp -= p_num; //파라미터 값만큼 체력감소
+            SettingHPImage();
+        }
     }
     public void IncreaseHP(int p_num)  //데미지 회복시 호출
     {

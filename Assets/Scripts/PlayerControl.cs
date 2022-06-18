@@ -10,9 +10,11 @@ public class PlayerControl : MonoBehaviour
     public Vector2 player_Pos;
     public AudioSource audioEnemyCollision;
 
-    public Sprite Change_GanglimAtk, Change_Ganglin_Idle;
+    public Sprite Change_GanglimAtk, Change_Ganglin_Idle, Change_Ganglim_Die;
     public SpriteRenderer ganglimAtk;
-    
+
+    public GameObject Land;
+    public GameObject InGame;
 
     private Rigidbody2D rb;
    
@@ -33,7 +35,6 @@ public class PlayerControl : MonoBehaviour
 
     bool isHurt;
     bool isSound = true;
-    SpriteRenderer sr;
     Color halfA = new Color(1, 1, 1, 0.5f);
     Color fullA = new Color(1, 1, 1, 1);
 
@@ -43,7 +44,8 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+        InGame = GameObject.Find("INGAME");
+        Land = GameObject.Find("Land");
         ganglimAtk = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         jumpBtn = GameObject.Find("JumpButton");
@@ -62,7 +64,13 @@ public class PlayerControl : MonoBehaviour
         {
             playerImg.sprite = playeratk;
         }*/
-
+        if (thePlayerHp.player_currentHp == 0)
+        {
+            ganglimAtk.sprite = Change_Ganglim_Die;
+            gameObject.layer = 15;
+            Land.SetActive(false);
+            InGame.GetComponent<BoxCollider2D>().enabled = false;
+        }
 
         fTickTime += Time.deltaTime;
         if (thePlayerHp.player_currentHp != thePlayerHp.player_MaxHp)
@@ -194,17 +202,17 @@ public class PlayerControl : MonoBehaviour
 
     IEnumerator alphaBlink()
     {
-        sr.color = halfA;
+        ganglimAtk.color = halfA;
         yield return new WaitForSeconds(0.2f);
-        sr.color = fullA;
+        ganglimAtk.color = fullA;
         yield return new WaitForSeconds(0.2f);
-        sr.color = halfA;
+        ganglimAtk.color = halfA;
         yield return new WaitForSeconds(0.2f);
-        sr.color = fullA;
+        ganglimAtk.color = fullA;
         yield return new WaitForSeconds(0.2f);
-        sr.color = halfA;
+        ganglimAtk.color = halfA;
         yield return new WaitForSeconds(0.2f);
-        sr.color = fullA;
+        ganglimAtk.color = fullA;
     }
 
     

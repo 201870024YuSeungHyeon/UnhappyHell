@@ -10,17 +10,28 @@ public class NoteManager : MonoBehaviour
 
     [SerializeField] Transform tfNoteAppear = null;
 
+    BossStatus bossStatus;
+
+    private void Start()
+    {
+        bossStatus = FindObjectOfType<BossStatus>();
+    }
+
     void Update()
     {
         currentTime += Time.deltaTime;
 
         if (currentTime >= 60d / bpm)
         {
-            int NoteIndex = Random.Range(0, NotePrefab.Length);
-            GameObject t_note = Instantiate(NotePrefab[NoteIndex], tfNoteAppear.position, Quaternion.identity);
-            t_note.transform.SetParent(this.transform);
-           
-            currentTime -= 90d / bpm;
+            if (bossStatus.BossHP > 0)
+            {
+                int NoteIndex = Random.Range(0, NotePrefab.Length);
+                GameObject t_note = Instantiate(NotePrefab[NoteIndex], tfNoteAppear.position, Quaternion.identity);
+                t_note.transform.SetParent(this.transform);
+
+                currentTime -= 90d / bpm;
+            }
+            
         }
     }
 
