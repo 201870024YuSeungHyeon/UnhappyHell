@@ -7,6 +7,7 @@ public class AttackEvent : MonoBehaviour
     public GameObject absorption;
     public GameObject absorbBtn;
     public SpriteRenderer absorptionSprite;
+    public AudioSource swordsound;
 
     public bool isAbsorb;
     public bool Absorbmode;
@@ -98,6 +99,7 @@ public class AttackEvent : MonoBehaviour
                     Destroy(collision.gameObject);
                     Attackmode = true;
                     Debug.Log("공격모드 활성화");
+                    swordsound.Play();
                     abc = asbcolor.normal;
                     r = 1;
                     g = 0;
@@ -131,6 +133,7 @@ public class AttackEvent : MonoBehaviour
                 {
                     Destroy(collision.gameObject);
                     Attackmode = true;
+                    swordsound.Play();
                     Debug.Log("공격모드 활성화");
                     abc = asbcolor.normal;
                     r = 0;
@@ -163,6 +166,7 @@ public class AttackEvent : MonoBehaviour
                 {
                     Destroy(collision.gameObject);
                     Attackmode = true;
+                    swordsound.Play();
                     Debug.Log("공격모드 활성화");
                     abc = asbcolor.normal;
                     r = 0;
@@ -203,6 +207,7 @@ public class AttackEvent : MonoBehaviour
        
         if (Attackmode == true)
         {
+            
             Debug.Log("공격 발사됨");
             Attackmode = false;
             abc = asbcolor.normal;

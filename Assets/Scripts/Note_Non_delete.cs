@@ -65,6 +65,7 @@ public class Note_Non_delete : MonoBehaviour
                 StopCoroutine(BossHitImageLow());
                 bossStatus.thisImg.sprite = bossStatus.chage_img_AnubisDead;
                 Invoke("Change", 1.5f);
+                
                 if (bossStatus.BossHP != 0)
                     audioEnemyCollision.Play();
                 else

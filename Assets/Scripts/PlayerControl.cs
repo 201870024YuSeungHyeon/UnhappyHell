@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour
     GameObject jumpBtn;
     GameObject LeftBtn;
     GameObject RightBtn;
+    
 
 
     private float fDestroyTime = 3f;
